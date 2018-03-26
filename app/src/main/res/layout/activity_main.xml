@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/my_appbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@android:color/white"
+            app:layout_scrollFlags="enterAlwaysCollapsed|scroll|snap"
+            app:scrimAnimationDuration="0"
+            app:titleEnabled="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_above="@+id/container_white"
+                    android:layout_margin="16dp"
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="title"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="desc" />
+                </LinearLayout>
+                <View
+                    android:id="@+id/container_white"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:background="@android:color/white"/>
+            </RelativeLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/days_list_4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="50dp"
+
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel hendrerit tortor. Cras in convallis quam. Aliquam erat volutpat. Praesent felis dui, volutpat ac luctus in, dapibus eu elit. Cras elementum, nisi non porttitor accumsan, eros tortor pharetra diam, in venenatis enim sem non neque. Mauris pharetra magna semper felis efficitur posuere. Nulla lobortis magna ante, sed viverra ante tristique nec. Nullam sollicitudin velit ultricies, dapibus augue vitae, malesuada libero. Ut sed sagittis augue. Mauris interdum eleifend consectetur. Nulla auctor convallis pulvinar. Aenean in volutpat augue, id pulvinar dui.
+
+Nullam scelerisque velit vel dapibus ullamcorper. In sed ornare magna. Suspendisse ut rhoncus est. Proin pretium, dolor eget cursus posuere, ante ante tempus lorem, vitae tempor orci libero vel enim. Morbi tincidunt mi mauris, ut viverra ex ornare ut. Quisque luctus laoreet felis quis lacinia. Nam risus urna, pretium et placerat et, tristique ac sem. Phasellus vitae mi iaculis, pretium enim quis, viverra ante. Maecenas pretium non ligula eu egestas.
+
+Mauris tincidunt accumsan purus id porttitor. Proin posuere, enim ac dignissim aliquam, nulla sem auctor nisl, sed consectetur leo ligula finibus augue. In vestibulum rutrum blandit. Suspendisse fermentum laoreet arcu id imperdiet. Duis convallis neque lobortis quam sagittis tincidunt. Morbi ullamcorper sit amet risus ut dictum. Nunc congue a ex ultrices dapibus.
+
+Nunc nisi ligula, vehicula a sapien et, elementum facilisis arcu. Donec accumsan id lorem quis mattis. Maecenas vestibulum enim at dapibus pellentesque. Maecenas ornare massa sit amet tellus dapibus tempor. Duis leo quam, vulputate sed turpis nec, vestibulum fringilla ante. Mauris molestie placerat eros eu tempor. In orci sapien, condimentum nec mi at, bibendum efficitur felis. Suspendisse dignissim quam id nibh finibus, id gravida mi pellentesque. Nullam mollis sed neque eget fringilla. Nam risus mauris, rhoncus euismod feugiat vitae, sodales a mauris. Cras risus est, bibendum vitae tempor quis, sollicitudin sit amet quam. Aenean ligula purus, tristique nec tortor a, pellentesque vehicula est. In nec erat vel velit hendrerit malesuada sit amet suscipit neque.
+
+Donec consequat hendrerit est, id viverra mi efficitur vitae. Sed ornare sem nec ultricies facilisis. Suspendisse augue metus, scelerisque vitae leo ac, consectetur finibus magna. Sed sollicitudin tortor quam, sit amet hendrerit metus lacinia finibus. Sed ultrices pharetra nunc eget hendrerit. Pellentesque dapibus sit amet ex at maximus. Morbi blandit lectus at malesuada elementum. Praesent at nulla feugiat erat elementum tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas at risus at felis aliquam viverra.
+
+" />
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_anchor="@id/my_appbar_container"
+        app:layout_anchorGravity="bottom|center"
+        android:background="@android:color/white">
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            android:id="@+id/tab_layout"
+            android:background="@color/colorAccent">
+
+        </android.support.design.widget.TabLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorAccent"/>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
